@@ -1,0 +1,31 @@
+http://code.tutsplus.com/tutorials/nodejs-infrastructure-part-1--net-26645
+http://code.tutsplus.com/articles/resources-to-get-you-up-to-speed-in-nodejs--cms-21431
+http://code.tutsplus.com/tutorials/nodejs-events--net-30817
+http://code.tutsplus.com/tutorials/how-to-scrape-web-pages-with-nodejs-and-jquery--net-22478
+http://code.tutsplus.com/articles/become-a-professional-javascript-developer-with-tuts-courses--cms-21095
+http://code.tutsplus.com/tutorials/introduction-to-express--net-33367
+http://code.tutsplus.com/tutorials/nodejs-for-beginners--net-26314
+http://code.tutsplus.com/tutorials/learning-server-side-javascript-with-nodejs--net-10044
+http://code.tutsplus.com/tutorials/nodejs-step-by-step-blogging-application--net-20496
+
+
+NodeJS
+
+	Oque é
+
+	Como funciona?
+
+	Exemplo de Uso (Respondendo um request)
+
+	Assincrono e SingleThreaded
+
+	Modulos
+
+	Quem usa?
+
+	Para que e porque não.
+
+	Express Framework
+
+	
+

@@ -1,0 +1,20 @@
+
+MVC
+
+	 Origem e Porque
+
+     Model
+
+     Controller
+
+     View 
+
+     É um fractal.
+
+     Decoupling
+
+     Facilidade de Teste
+
+     Quem usa?
+
+     Exemplo

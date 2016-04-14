@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>    <TITLE>Exercício 13 - Seletores</TITLE><meta charset="UTF-8">  </HEAD>
+<BODY>
+<script src='jquery.js'></script>
+
+<table border="1" cellpadding=0 cellspacing=5><tr><td style="width:200px" align="center">
+<div class="MinhaClasse" id="div01" style="width:100px;height:100px;border-style:solid;border-width:2px"> </div><br>
+<div class="OutraClasse" id="div02" style="width:100px;height:100px;border-style:solid;border-width:2px"> </div><br>
+<div class="MinhaClasse" id="div03" style="width:100px;height:100px;border-style:solid;border-width:2px"> </div></td>
+<td style="width:200px" align="center"></td></tr></table><br>
+
+<a href="#" id="aTodos" style="font-family:verdana">Mudar a cor de fundo de todos os elements do documento</a><br>
+<a href="#" id="aClass" style="font-family:verdana">Mudar a cor de fundo de todos os elements de uma classe</a><br>
+<a href="#" id="aElement" style="font-family:verdana">Mudar a cor de fundo de todos DIV</a><br>
+<a href="#" id="aId" style="font-family:verdana">Mudar a cor de fundo de um determinado id</a><br>
+
+<script>
+$("#aTodos")  .click(function (){ 	$("*").css("background-color","yellow");  });
+$("#aClass")  .click(function (){ 	$(".MinhaClasse").css("background-color","yellow");  });
+$("#aElement").click(function (){ 	$("div").css("background-color","yellow");  });
+$("#aId")     .click(function (){ 	$("#div03").css("background-color","yellow");  });
+</script>
+</BODY>
+</HTML>
+

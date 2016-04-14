@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>    <TITLE>Exercício 14 - Criando Elementos</TITLE><meta charset="UTF-8">  </HEAD>
+<BODY>
+<script src='jquery.js'></script>
+
+<div class="MinhaClasse" id="div01"></div><br>
+
+<a href="#" id="aTexto" style="font-family:verdana">Adiciona texto</a><br>
+<a href="#" id="aImagem" style="font-family:verdana">Criar um IMG dentro do Div</a><br>
+<a href="#" id="aTabela" style="font-family:verdana">Criar uma tabela dentro do Div</a><br>
+<a href="#" id="aBotao" style="font-family:verdana">Criar um botão dentro do Div</a><br>
+
+<script>
+$("#aTexto").click(function(){
+	$("#div01").html("Algum texto adicionado");
+});
+$("#aImagem").click(function(){
+	$("#div01").html("<IMG SRC='logo.png'/>");
+});
+$("#aTabela").click(function(){
+	$("#div01").html("<table border=1><tr><td style='width:100px;heigth:100px'>a</td></tr></table>");
+});
+$("#aBotao").click(function(){
+	$("#div01").html("<input type=button value='CliqueMe' id='btnCliqueMe'/>");
+	$("#btnCliqueMe").click(function (){
+		alert("Fui Clicado");
+	});
+});
+</script>
+</BODY>
+</HTML>
+

@@ -1,0 +1,312 @@
+
+Variaveis
+
+           A questão do escopo = var.
+
+               Apesar do Javascript ser uma linguagem dinamica sem declaração de tipo de dados como Python, PHP, Ruby, o Javascript utiliza a palavra reservada var para definir se uma variável é local ou global.
+
+               Por definição toda a variavel declarada sem "var" é considerada global, como é demonstrado no próximo exemplo 
+
+               Esse é um detalhe importante do Javascript que passa despercebido aos iniciantes
+
+               Podemos também usar o modo estrito que não permite que se use variaveis sem q as declaremos antes. Para isso é apenas necessário que se coloque a string "use strict" no inicio do arquivo ou função desejada.
+
+           Exercício 01 - Definindo escopo com "var"
+               Copiar aqui a definição do exercício
+
+           Exercício 01.01 - Definindo escopo com "var", em modo estrito.
+               Copiar aqui a definição do exercício
+
+
+           Tipos de Variaveis - Tipos Primitivos
+               O Javascript reconhece os seguintes tipos de variaveis:
+
+               Number:
+               Boolean
+               String:
+               Array:
+               Object:
+
+           Tipos de Variaveis - Constantes Especiais
+               O Javascript ainda usa duas constantes especiais
+
+               null: Quando a variavel foi declarada, existe essa variavel, mas, ela não tem valor, assim como o null do Java
+
+               undefined: Quando a variavel não foi declarada e não é conhecida
+
+           Exercício 02 - Uso do null e undefined
+
+           Arrays ([] x Array)
+
+               Um tipo bastante utilizado em javascript é o array simples.
+
+               Ele é indexado tanto por chave quanto por posição. 
+
+               Quando usamos por posição usamos o método push e quando por chave, usamos apenas atribuição simples como no exemplo a seguir
+
+           Exercício 03 - Arrays
+
+           Igualdade, == versus ===
+
+              Como em qualquer linguagem não tipada temos o problema de como comparar tipos inteiros, dessa forma, assim como em PHP temos dois operadores de igualdade (== e ===).
+
+              == compara se dois valores são iguais ou equivalentes, indiferente de tipo.
+
+              === compara se dois valores são iguais ou equivalentes, levando em consideração o tipo.
+
+           Exercício 04 - Operadores de Igualdade
+
+Objetos
+
+		   Objetos em Javascript
+
+		   	   Em Javascript todo objeto na realidade é um vetor de propriedades, e essas propriedades podem ser outros objetos ou valores primitivos. 
+
+		   	   Obviamente tudo podendo ser definido em momento de execução e de forma dinâmica.
+
+		   Funções também são Objetos
+		       O Interessante é que em Javascript até as funções também são objetos, na realidade a forma de emularmos caracteristiscas de orientação a objeto como encapsulamento, polimorfismo, entre outros é através de funções.
+
+		       Como as funções também somos objetos, podemos colocar propriedades nas proprias funcoes.
+
+		   Exercício 05 - Funções também são Objetos
+
+		   Como criar objetos
+
+		       Como vimos, as funções são usadas para se criar os tipos de objetos, mas, como criamos objetos novos a partir de funções ou até mesmo de tipos basicos?
+
+		       Utilizamos o operador new para isso como no exemplo a seguir:
+
+		   Exercício 06 - Criando Objetos
+
+           Todo objeto é um vetor de outros objetos. obj.a = obj['a']
+
+               Em Javascript todos os objetos são na verdade vetores de propriedades que podem ser valores primitivos ou até mesmo outros objetos.
+
+           Exercício 07 - Objetos são vetores de propriedades. 
+
+           Javascript Object Notation = JSON = Expressando o Dinamismo
+
+               Como vimos, que todo objeto em javascript é na realidade um vetor de propriedades, é possivel definir todas utilizando uma notação de vetor mesmo, que é o JSON.
+
+               O JSON se tornou uma forma pratica de se transferir dados pois é bastante prático e não tem o overhead de outros protocolos como SOAP, RMI, CORBA, etc...
+
+           Exercício 08 - JSON
+
+           Programação Procedural
+
+               Javascript também utiliza as mesmas construções de bloco que encontramos em outras linguagens como:
+
+               if(): Testa uma condição logica e executa um bloco se verdadeiro
+               for(): Executa um laço, n número de vezes
+               while(): Executa um laço enquanto uma determinada condição é verdadeira.
+               switch(): Seleciona um bloco de comandos de acordo com o valor de uma variavel.
+
+               Esses comandos seguem os mesmos principios que linguagens como C/C++ e Java, e não iremos nos aprofundar neles.
+
+           Herança e Polimorphismo
+
+               É desconhecido de muitos, mas, Javascript também possui herança e polimorfismo como Java, C++ e outras linguagens. 
+
+               Porém ao contrário de muitas linguagens, ela não utiliza o conceito de "classes" e sim o de "prototipos", ou seja, cada objeto em Javascript tem uma super-classe, sempre levando em cadeia até o objeto pai de todos que é object.
+
+               Apesar de ser um pouco diferente da implementação de C++ ou Java, esse tipo de herança é bastante simples de se utilizar
+
+           Exercício 09 - Herança por Prototipos.
+
+           Encapsulamento
+
+               Porém é importante saber que algumas vezes queremos que valores não sejam visiveis para fora da function que definiu o objeto. Para se encapsular informações e métodos é necessário apenas não declarar essas informações usando o this da function.
+
+           Exercício 10 - Encapsulamento
+
+           Usando JSHINT
+
+               Uma ferramenta bastante util para vermos todas as caracteristicas do Javascript e até mesmo pegar bugs dificeis de serem capturados manulmente é utilizar uma ferramenta como o JSHint que faz uma analise do codigo fonte javascript e alerta para variaveis não-declaradas, possiveis operadores errados, etc...
+
+               Ele tem plugins para o Visual Studio, Eclipse, Netbeans, além de um site que permite que se possa testar pequenos trechos de codigo para verificar se estão de acordo com as boas praticas do javascript
+
+          
+
+SingleThreaded e Assincrono
+   
+           Single Threaded x MultThreaded
+                Uma das caracteristicas do Javascript é que ele é Single-Threaded, ou seja, tem sempre apenas uma linha de execução rodando código javascript em um determinado momento. Esse é um paradigma um pouco diferente do utilizado nas linguagens de programação tradicionais como C/C++, Java e outros, porém para o ambiente aonde o Javascript atua tem uma série de vantagens.
+
+                A Abordagem MultThreaded: Na abordagem multithreaded, uma linha de execução é criada a cada requisição ou conexão do cliente e dessa forma utiliza recursos de máquina além do problema de que existe agora diversas linhas de execução acessando ao mesmo tempo os mesmos dados. 
+
+                O ponto nessa abordagem é que mesmo que essa requisição esteja esperando por um evento de I/O como escrever no disco ou por rede, essa linha de execução fica sem executar nada, ou seja, bloqueada.
+
+                A Abordagem SingleThreaded: Nessa abordagem existe apenas uma linha de execução que está sendo compartilhada entre diversas requisições. Enquanto que uma requisição está fazendo I/O ou bloqueada, a linha de execução está processando outra requisição e assim por diante, nunca parando...
+
+           Ex.11 - Simple Server Java
+
+           Ex.11 - Simple Server Node
+           
+           Assincrono
+                Então na realidade podemos falar que Javascript é SingleThreaded ou Assincrono, mas, oque é assincrono?
+
+                Sincrono é quando nosso código pede por algo, envio de uma mensagem ajax por exemplo, e ESPERA pela operação terminar para continuar trabalhando (Essa é a forma tradicional de programar como C/C++, Java, etc...).
+
+                Assincrono significa que nós pedimos uma operação, seja de I/O, e rede, e NÃO ESPERAMOS pela operação ser completada, porém indicamos que se essa operação completar, que ela nos interrompa e executa um código pré-determinado chamado CallBack. (Essa é a forma do Hardware funcionar através de interrupções)
+
+           CallBacks
+
+                A programação assincrona é apelidade de programação "por eventos", porque na realidade nos requisitamos uma ação e esperamos pelo "evento" de retorno dessa ação, também chamado de CallBack.
+
+                O Callback é apenas a function que será chamada quando essa operação for completada. 
+
+                Esse tipo de programação tem a vantagem de que o programa não fica "trancado" enquanto esperamos o retorno de uma operação longa como uma consulta no banco.
+
+                Porém, é claro que manter o estado consistente de uma aplicação no momento em que diversos "eventos" e "Callbacks" podem ser executados ao mesmo tempo é mais desafiador do que en uma aplicação em que tudo acontece uma coisa de cada vez.
+
+                
+            Ex.12 - Conexão e leitura de registros do MySQL
+
+
+	Usando Javascript para Manipular o Browser
+	    Javascript foi criado em 1995 exatamente para que se pudesse ter uma forma de se manipular os elementos de uma tela em HTML. Como sabemos uma pagina HTML é na realidade uma árvore que implementa uma estrutura chamada DOM (Document Object Model), que é a forma pela qual os elementos em HTML são armazenados na memória do computador.
+
+	    Porém existe um problema, cada uma das engines de HTML que existem como WebKit (Chrome/Safari), Gecko (Firefox) e Trident (IE 11) utilizam uma implementação um pouco diferente do DOM, oque torna bastante desafiador codificar em javascript no browser de forma que seja compatível com todos eles, uma vez que cada um tem a sua forma diferente de navegar pelo DOM. 
+
+	
+	A Solução: jQUERY
+	    A solução que surgiu nos ultimos tempos é jQuery. Porém existem alguns pontos que eu acho interessante frisar:
+
+	    jQuery não é apenas uma biblioteca, você programa PARA o jQuery e não COM jQuery
+
+	    jQuery é "Query sobre Javascript", ou seja, ele tem duas partes, a parte de Query, que chamamos de seletor, e a parte de ação que executa uma determinada ação sobre os elementos do DOM que retornaram do seletor.
+
+	O "Query" do jQuery
+	    As queries do jQuery são compostas de duas partes:Seletores e Condições.
+
+	    Seletores: Retorna todos os elementos de um determinado tipo, classe, nome, ou atributo, a nivel de comparação seria equivalente ao FROM do SQL
+	    Condição: Faz a filtragem dos elementos retornado pelo seletor usando uma determinada condição, a nivel de comparação seria equivalente ao WHERE do SQL.
+
+	    Exemplos:
+	    $("input:not(:checked)").css( "background-color", "yellow" ) 
+	    Seleciona todos os elementos <input> que não estão com o attributo checked como true, e os pinta de amarelo.
+
+	    $("tr:last").css(backgroundColor: "yellow");
+	    Seleciona o ultimo elemento tr do documento e pinta de vermelho
+
+	    Também podemos fazer uma query com o resultado de outra query
+
+	    $("table").find("tr:last").css(backgroundColor: "red");
+	    Seleciona o ultimo elemento tr do documento e pinta de vermelho
+
+
+    Seletores
+        Seletores básicos para queries:
+		     All Selector (“*”) = Seleciona todos os elementos
+		     Class Selector (“.class”) = Seleciona os elementos de uma determinada class
+		     Element Selector (“element”) = Seleciona os elementos por um determinado element
+		     ID Selector (“#id”) = Seleciona os elementos com um determinado id.
+		     
+		Também podemos selecionar diversos elementos de uma vez só:
+		     Multiple Selector (“selector1, selector2, selectorN”) = Seleciona mult
+		     Multiple Attribute Selector [name="value"][name2="value2"]
+
+		Para Referencia: http://api.jquery.com/category/selectors/
+
+    Ex 13 - Seletores
+
+	O "j" do jQuery
+        Uma vez que temos como selecionar os elementos do DOM da página usando jQuery agora temos que utilizar esses elementos selecionados para executar ações. Basicamente em jQuery nós vamos executar 3 tipos de ações sobre esses elementos:
+
+        -Criando ou Definindo Elementos: 
+        -Definindo ou Alterando Atributos
+        -Registrando "Callbacks" de eventos
+
+
+		Criando ou Definindo Elementos 
+		
+		Na Web 2.0, a maior parte do HTML visualizado nas páginas é gerado dinamicamente, ou seja, o proprio HTML é removido ou adicionado das páginas dinamicamente por codificação. 
+
+		Existem diversas formas de se adicionar código para uma página, mas, a forma mais comum é utilizar o método .html(). Esse método apenas adiciona código html ao corpo de cada um dos elementos selecionados, sobrescrevendo o que estava no corpo anteriormente.
+
+		Outros comandos são .remove() que remove os elementos do DOM, insertAfter() que insere depois de um determinado elemento entre outros.
+
+		Para uma referencia completa:
+		http://api.jquery.com/category/manipulation/
+
+        Ex 14 - Criando elementos
+
+		Definindo atributos
+
+		Além de criar elementos, também podemos dinamicamente mudar os seus atributos através do comando .attr(), dessa forma podemos mudar a classe de um elemento, se ele está visivel ou não, checked ou não, texto interno, etc...
+
+		Também é possivel mudar atributos visuais com o comando .css() que muda os atributos de Cascading Style Sheets associados aos elementos selecionados.
+
+        Ex 15 - Definindo atributos
+
+		Eventos
+
+		Como vimos anteriormente o javascript é uma linguagem assincrona, orientada a "eventos", ou seja, é possivel registrar uma função que será executada a cada vez que um determinado evento na página for executado. Basicamente existe 3 tipos de eventos que o javascript trata:
+
+		Eventos de Browser: São eventos que são disparados quando o browser é redimensionado, ocorre scroll, entre outros
+		Eventos de Documento: São eventos disparados quando o documento HTML é carregado ou descarregado do browser.
+		Eventos de Elementos HTML: São eventos que são disparados quando o usuário interage com os elementos HTML através do teclado, cliques de mouse, dropbox, etc...
+
+		Ex 16 - Definindo Callback de eventos
+	
+
+	O jQuery é a Plataforma
+	    Temos que lembrar que jQuery é a plataforma para desenvolvimento, ou seja, tudo que iremos programar no browser na parte de cliente é implementado usando a API e as funções do jQuery. 
+
+	    Mas, então como compara jQuery com outras plataformas de desenvolvimento de aplicações como Visual Basic, Java e Delphi?
+
+		Oque são Componentes Visuais 
+
+		As linguagens "visuais" que se tornaram bastante populares na decada de 90 fizeram com q se tornasse fácil o desenvolvimento de aplicações visuais e de fácil manuseio para os usuários.
+
+		Elas se caracterizam pelo uso de "Componentes Visuais", ou seja controles que podem ser reutilizados nas aplicações de forma fácil e produtiva.
+
+		<< Imagem dos controles >>
+
+		Linguagens que utilizam esse paradigma são: Delphi, VB6, Windows Forms, Java Swing entre outros.
+
+
+    Os Plugins do jQuery são os componentes visuais da Web
+
+        Porém, o jQuery é a plataforma de componentes visuais da Web.
+
+        Utilizando Plugins de jQuery nós podemos também criar componentes visuais que são facilmente utilizados pelo usuário e que podem ser reutilizados entre diversos projetos.
+
+        E é extremamente fácil criar esses componentes visuais. Vamos criar um plugin que valida CPF e um que cria uma tabela de alunos.
+	
+	Ex 17 - Criando um Plugin de Validação de CPF
+
+
+	
+	Ex 18 - Criando um Plugin de tabela de alunos alocados
+
+	
+	jQuery UI - Biblioteca de componentes visuais
+
+	    A biblioteca padrão de plugins visuais para jQuery é o JQuery UI que tem mais de 15 controles que são utilizados comunmente tanto em aplicações visuais quanto web como:
+
+	    Button
+	    Menu
+	    Tabs
+	    ProgressBar
+	    SelectMenu
+
+	    e vários outros.
+
+
+	    Referencia:
+	    http://jqueryui.com/demos/
+
+	Sistema KL - Demonstração do jQuery UI.
+	    Um sistema que desenvolvi apenas usando o jQuery UI é o sistema de hospedagem e eventos do Khadro Ling que é o templo budista de três coroas, e que foi desenvolvido em JQuery UI / PHP e MySQL.
+
+	Conclusão		
+
+        Birth and Death of Javascript
+  
+
+
+
+
+

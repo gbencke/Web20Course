@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>    <TITLE>Exercício 15 - Criando Elementos</TITLE><meta charset="UTF-8">  </HEAD>
+<BODY>
+<script src='jquery.js'></script>
+
+<div class="MinhaClasse" id="div01" style='width:100px;heigth:100px;background-color:red'>
+Meu Div
+</div><br>
+
+<a href="#" id="aFundo" style="font-family:verdana">Mudar Fundo</a><br>
+<a href="#" id="aLargura" style="font-family:verdana">Aumentar 10px de Largura</a><br>
+<a href="#" id="aBorda" style="font-family:verdana">Adicionar Borda</a><br>
+
+<script>
+$("#aFundo").click(function(){
+	$("#div01").css("background-color","yellow");
+});
+$("#aLargura").click(function(){
+	$("#div01").css("width","110px");
+});
+$("#aBorda").click(function(){
+	$("#div01").css("border-width","5px");
+	$("#div01").css("border-style","solid");
+});
+</script>
+</BODY>
+</HTML>
+

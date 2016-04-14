@@ -1,0 +1,39 @@
+REST
+	Aplicação Distribuida (Oque é)
+
+	Como Transportar Dados?
+
+	CORBA?
+
+	RMI?
+
+	EJB?
+
+	SOAP?
+
+	Porque não HTTP Puro?
+ 
+	Representando objetos em REST (JSON)
+
+	As operações de HTTP (Verbos)
+
+	GET
+
+	POST
+
+	DELETE
+
+	UPDATE
+
+	Identificacao URI
+
+	Exemplo de REST com Chrome e NodeJS
+
+	Porque usar REST?
+
+	
+
+
+
+	
+
