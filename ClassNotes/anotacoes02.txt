@@ -1,0 +1,30 @@
+
+
+AlunoJose.Prototype; // Aluno
+AlunoJoao.Prototype; // Aluno
+AlunoPedro.Prototype; // Aluno
+AlunoPaulo.Prototype; // Aluno
+AlunoThiago.Prototype; // Aluno
+
+AlunoJose.prototype.prototype.Escola = "Colegio Joao 23"
+Aluno.prototype.Escola = "Colegio Joao 23"
+
+AlunoJose.Escola; // Colegio Joao 23
+AlunoJoao.Escola; // Colegio Joao 23
+AlunoPedro.Escola; // Colegio Joao 23
+AlunoPaulo.Escola; // Colegio Joao 23
+AlunoThiago.Escola; // Colegio Joao 23
+
+
+
+
+plugin jquery
+
+jquery.prototype.BenckeGrid = function (){
+
+
+}
+
+
+#("divGrid").BenckeGrid({....});
+

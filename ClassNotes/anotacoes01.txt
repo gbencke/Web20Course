@@ -1,0 +1,16 @@
+function Aluno ( Nome ) {
+    return {
+       NomeAluno : Nome
+    } 
+}
+
+function UsuarioSistema (Usuario, Senha){
+    return {
+       USuario : USuario
+       Senha : Senha
+    } 
+}
+
+Aluno.prototype = new UsuarioSistema ("Bencke",1234);
+
+var Bencke = new Aluno(); // Ao mesmo tempo Aluno e USuario Sistema

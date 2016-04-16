@@ -1,0 +1,35 @@
+function Aluno(NomeAluno){   // Escopo 1
+     function Materia(){ // Escopo 2
+          function Nota(){ // Escopo 3
+               
+
+          }
+          return ['Algoritmo','EstruturaI','Portugues'];
+     }
+
+   function isAprovado(){ .... } 
+ 
+   return 
+   {
+      getMateria : Materia(),
+      Nome : NomeAluno ,
+      Aprovado : isAprovado()
+   };
+}
+
+
+
+var Bencke = new Aluno("Bencke"); // Bencke = Aluno();
+
+console.log(Bencke) 
+// OK = 
+{ getMateria : 
+  Materia(), Nome : "Bencke", 
+  isAprovado : isAprovado() }
+
+console.log(Bencke.Materia) // OK = [ ... ]
+console.log(Bencke.isAprovado) // OK = true
+
+
+
+

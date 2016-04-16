@@ -1,0 +1,23 @@
+
+
+var Bencke = 
+{ Nome : "Guilherme", Endereco: "Rua X" , 
+Casa:"1", 
+Casa2:"2",
+Endereco : { Log : "Rua Y", Num: 512, CEP: 90909 }
+}
+
+
+console.log(Bencke["Nome"]); // Guilherme
+console.log(Bencke["Endereco"]); // RuaX
+console.log(Bencke["Casa"]); // RuaX
+console.log(Bencke["Casa2"]); // RuaX
+
+foreach( x in Bencke){
+    // Guilherme
+    // Rua X
+    // { Log : "Rua Y", Num: 512, CEP: 90909 }
+    foreach( y in Log){
+
+    }
+}
